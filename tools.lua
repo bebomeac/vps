@@ -1,5 +1,5 @@
-﻿--Begin Tools.lua :)
-local SUDO = 369155273 -- حط ايديك هنا <===
+--Begin Tools.lua :)
+local SUDO = 369155273-- حط ايديك هنا <===
 function exi_files(cpath)
     local files = {}
     local pth = cpath
@@ -505,14 +505,14 @@ local function pre_process(msg)
 			redis:set('ExpireDate:'..msg.to.id,true)
 			redis:setex('ExpireDate:'..msg.to.id, 86400, true)
 			if lang then
-				tdcli.sendMessage(msg.to.id, msg.id_, 1, '📌¦_تم دعم المجموعه لمده يوم واحد يرجى التحدث مع مطوري لتجديد الوقت_', 1, 'md')
+				tdcli.sendMessage(msg.to.id, msg.id_, 1, '📌¦_تم دعم المجموعه لمده يوم واحد يرجى التحدث مع مطوري لتجديد الوقت_ \n 📌¦ مـطـور الـسـورس : الزعـيـم > @TH3BOSS ', 1, 'md')
 			else
-				tdcli.sendMessage(msg.to.id, msg.id_, 1, '*📌¦ please talk to my sudo to re charge me.*', 1, 'md')
+				tdcli.sendMessage(msg.to.id, msg.id_, 1, '*📌¦ please talk to my sudo to re charge me.* \n 📌¦ مـطـور الـسـورس : الزعـيـم > @TH3BOSS ', 1, 'md')
 			end
 		end
 		if chex and not exd and msg.from.id ~= SUDO and not is_sudo(msg) then
-			local text1 = '📌¦ دعم ال مجموعه لقد انتهى⌚️ \n\nID:  <code>'..msg.to.id..'</code>\n\nعندما ترید البوت ان یترک المجموعه نفذ هذا الامر التالي\n\n/leave '..msg.to.id..'\nلدخول هذا المجموعه تستطیع الاستفاده من الامر التالي🛡:\n/jointo '..msg.to.id..'\n_________________\nعندما ترید دعم المجموعه من جدید تستطیع الاستفاده من الاوامر التالیه⌚️...\n\n<b>لدعم لمدت شهر:</b>\n/plan 1 '..msg.to.id..'\n\n<b>الدعم لمدة 3 اشهر:</b>\n/plan 2 '..msg.to.id..'\n\n<b>لدعم بلا نهایه👨🏻⌚️☑️:</b>\n/plan 3 '..msg.to.id
-			local text2 = '📌¦_دعم هذه المجموعه انتهى ولان لم یتم الدعم المجدد المجموعه تم حذفها من قائمه البوت وسیخرج البوت من المجموعه._'
+			local text1 = '📌¦ دعم المجموعه لقد انتهى ⌚️ \n\n📌¦ 📌¦ الايـدي :  <code>'..msg.to.id..'</ code>\n\n📌¦ عندما ترید البوت ان یترک المجموعه نفذ هذا الامر التالي\n\nغادر '..msg.to.id..'\n📌¦ لدخول هذا المجموعه تستطیع الاستفاده من الامر التالي \nدخول '..msg.to.id..'\n🔹➖➖🔹➖➖🔹➖➖🔹\n📌¦ عندما تريد دعم المجموعه من جدید تستطیع الاستفاده من الاوامر التالیه⌚️...\n\n<b>📌¦ الدعم لمده شهر :</b>\n/المده 1 '..msg.to.id..'\n\n<b>📌¦ الدعم لمده 3 اشهر :</b>\nالمده 2 '..msg.to.id..'\n\n<b>📌¦ الدعم مدى الحياه :</b>\nالمده 3 '..msg.to.id
+			local text2 = '📌¦_دعم هذه المجموعه انتهى ولان لم یتم الدعم المجدد المجموعه تم حذفها من قائمه البوت وسیخرج البوت من المجموعه._ \n 📌¦ مـطـور الـسـورس : الزعـيـم > @TH3BOSS '
 			local text3 = '_Charging finished._\n\n*Group ID:*\n\n*ID:* `'..msg.to.id..'`\n\n*If you want the robot to leave this group use the following command:*\n\n`/Leave '..msg.to.id..'`\n\n*For Join to this group, you can use the following command:*\n\n`/Jointo '..msg.to.id..'`\n\n_________________\n\n_If you want to recharge the group can use the following code:_\n\n*To charge 1 month:*\n\n`/Plan 1 '..msg.to.id..'`\n\n*To charge 3 months:*\n\n`/Plan 2 '..msg.to.id..'`\n\n*For unlimited charge:*\n\n`/Plan 3 '..msg.to.id..'`'
 			local text4 = '_Charging finished. Due to lack of recharge remove the group from the robot list and the robot leave the group._'
 			if lang then
@@ -636,8 +636,8 @@ if is_sudo(msg) then
 					redis:set('CheckExpire::'..msg.to.id,true)
 				end
 				if lang then
-					tdcli.sendMessage(SUDO, 0, 1, '📌¦ وقت تفعيل المجموعة '..matches[2]..'📌¦ الوقت المقدر  '..matches[3]..' 📌¦ وقت التفعيل', 1, 'md')
-					tdcli.sendMessage(matches[2], 0, 1, 'تم تنفيذ امر المطور البوت بالمدة ⌚️☑️ `'..matches[3]..'` تم دعم یوم🛡 \n لمشاهده وقت دعم البوت ارسل فحص  🗣⚒...',1 , 'md')
+					tdcli.sendMessage(SUDO, 0, 1, '📌¦ وقت تفعيل المجموعه '..matches[2]..'📌¦ الوقت المقدر  '..matches[3]..' 📌¦ وقت التفعيل', 1, 'md')
+					tdcli.sendMessage(matches[2], 0, 1, 'تم تنفيذ امر المطور البوت بالمدة ⌚️☑️ `'..matches[3]..'` تم دعم یوم🛡 \nلمشاهده وقت دعم البوت ارسل فحص  🗣⚒...',1 , 'md')
 				else
 					tdcli.sendMessage(SUDO, 0, 1, '*Recharged successfully in the group:* `'..matches[2]..'`\n_Expire Date:_ `'..matches[3]..'` *Day(s)*', 1, 'md')
 					tdcli.sendMessage(matches[2], 0, 1, '*Robot recharged* `'..matches[3]..'` *day(s)*\n*For checking expire date, send* `/check`',1 , 'md')
@@ -659,8 +659,8 @@ if is_sudo(msg) then
 				redis:set('CheckExpire::'..msg.to.id,true)
 			end
 			if lang then
-				tdcli.sendMessage(SUDO, msg.id_, 1, '📌¦ تم تفعيل المجموعة بنجاح لامر 1 '..matches[3]..' تم التفعیل \n 📌¦ هذه المجموعه ل30 یوم مشحونه شهر واحد🛠 )', 1, 'md')
-				tdcli.sendMessage(matches[3], 0, 1, '_📌¦ تم تفعیل المجموعه بنجاح وستبقی مشحونه الی 30 یوم⌚️_', 1, 'md')
+				tdcli.sendMessage(SUDO, msg.id_, 1, '📌¦ تم تفعيل المجموعة بنجاح لامر 1 '..matches[3]..' تم التفعیل \n 📌¦ هذه المجموعه ل30 یوم مشحونه شهر واحد🛠 ) \n 📌¦ مـطـور الـسـورس : الزعـيـم > @TH3BOSS ', 1, 'md')
+				tdcli.sendMessage(matches[3], 0, 1, '_📌¦ تم تفعیل المجموعه بنجاح وستبقی مشحونه الی 30 یوم⌚️_ \n 📌¦ مـطـور الـسـورس : الزعـيـم > @TH3BOSS ', 1, 'md')
 			else
 				tdcli.sendMessage(SUDO, msg.id_, 1, '*Plan 1 Successfully Activated!\nThis group recharged with plan 1 for 30 days (1 Month)*', 1, 'md')
 				tdcli.sendMessage(matches[3], 0, 1, '*Successfully recharged*\n*Expire Date:* `30` *Days (1 Month)*', 1, 'md')
@@ -675,8 +675,8 @@ if is_sudo(msg) then
 				redis:set('CheckExpire::'..msg.to.id,true)
 			end
 			if lang then
-				tdcli.sendMessage(SUDO, 0, 1, '📌¦ تم تفعيل المجموعة بنجاح لامر 2 '..matches[3]..' تم التفعيل\n لمده 3 اشهر صالحة ', 1, 'md')
-				tdcli.sendMessage(matches[3], 0, 1, '📌¦ تم تفعيل البوت بنجاح وصلاحيته لمدة 90 يوم  )', 1, 'md')
+				tdcli.sendMessage(SUDO, 0, 1, '📌¦ تم تفعيل المجموعة بنجاح لامر 2 '..matches[3]..' تم التفعيل\n لمده 3 اشهر صالحة \n 📌¦ مـطـور الـسـورس : الزعـيـم > @TH3BOSS ', 1, 'md')
+				tdcli.sendMessage(matches[3], 0, 1, '📌¦ تم تفعيل البوت بنجاح وصلاحيته لمدة 90 يوم  ) \n 📌¦ مـطـور الـسـورس : الزعـيـم > @TH3BOSS ', 1, 'md')
 			else
 				tdcli.sendMessage(SUDO, msg.id_, 1, '*Plan 2 Successfully Activated!\nThis group recharged with plan 2 for 90 days (3 Month)*', 1, 'md')
 				tdcli.sendMessage(matches[3], 0, 1, '*Successfully recharged*\n*Expire Date:* `90` *Days (3 Months)*', 1, 'md')
@@ -690,8 +690,8 @@ if is_sudo(msg) then
 				redis:set('CheckExpire::'..msg.to.id,true)
 			end
 			if lang then
-				tdcli.sendMessage(SUDO, msg.id_, 1, '📌¦ تم تفعيل المجموعة بنجاح لامر 3 '..matches[3]..' تم التفعيل\nصالح مدى الحياه', 1, 'md')
-				tdcli.sendMessage(matches[3], 0, 1, '📌¦ تم تفعيل البوت بنجاح وصلاحيته مدى الحياه )', 1, 'md')
+				tdcli.sendMessage(SUDO, msg.id_, 1, '📌¦ تم تفعيل المجموعة بنجاح لامر 3 '..matches[3]..' تم التفعيل\nصالح مدى الحياه \n 📌¦ مـطـور الـسـورس : الزعـيـم > @TH3BOSS ', 1, 'md')
+				tdcli.sendMessage(matches[3], 0, 1, '📌¦ تم تفعيل البوت بنجاح وصلاحيته مدى الحياه ) \n 📌¦ مـطـور الـسـورس : الزعـيـم > @TH3BOSS ', 1, 'md')
 			else
 				tdcli.sendMessage(SUDO, msg.id_, 1, '*Plan 3 Successfully Activated!\nThis group recharged with plan 3 for unlimited*', 1, 'md')
 				tdcli.sendMessage(matches[3], 0, 1, '*Successfully recharged*\n*Expire Date:* `Unlimited`', 1, 'md')
@@ -910,11 +910,11 @@ end
 				end
 			end
 		end
-		if matches[1]:lower() == 'check' and is_mod(msg) and not matches[2] then
+		if matches[1]:lower() == 'فحص' and is_mod(msg) and not matches[2] then
 			local expi = redis:ttl('ExpireDate:'..msg.to.id)
 			if expi == -1 then
 				if lang then
-					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_المجموعة مفعله مدى الحياة⌚️_', 1, 'md')
+										tdcli.sendMessage(msg.to.id, msg.id_, 1, '_المجموعة مفعله مدى الحياة⌚️_', 1, 'md')')
 				else
 					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_Unlimited Charging!_', 1, 'md')
 				end
@@ -1305,11 +1305,11 @@ patterns = {
 "^(حفظ ملف) (.*)$",
 "^(اضافه)$",
 "^([Gg]id)$",
-"^([Cc]heck)$",
+"^(فحص)$",
 "^([Cc]heck) (.*)$",
 "^([Cc]harge) (.*) (%d+)$",
 "^([Cc]harge) (%d+)$",
-"^([Jj]ointo) (.*)$",
+"^(دعوه) (.*)$",
 "^(غادر) (.*)$",
 "^(المده) ([123]) (.*)$",
 "^(اضافه)$",
