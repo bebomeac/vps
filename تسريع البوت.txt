@@ -1,12 +1,23 @@
-ş? ÇĞÇ ÇáÈæÊ ÈØíÁ ÇİÊÍ ÊÑãäÇá æÎáí Ğæáí 
-ÈÇáÓÑå æÑì ßá ßæÏ ÇäÊÑ ??
+]]
 
-ş?  killall screen
-—------------------
-ş? killall telegram-cli
-—------------------
-ş? rm -r ~/.telegram-cli/state
-—------------------
-ş? killall tmux
+do
 
-ÑÇÍ ÊáÇÍÙ Çßæ İÑŞ ÈÇáÓÑÚÉ : #ÇáŞíÕÑ
+chmod +x speedtest_cli.py = ./speedtest_cli.py - -share 
+
+return {
+            patterns = {
+                '/ØªØ³Ø±ÙŠØ¹ (.+)'
+                },
+           
+return [[  âœ…ØµØ§Ø± Ø³ØªØ§Ø¯ÙŠ ØªØ§Ø¨Ø¹ @b7_78 ğŸ˜• "..msg.to.title.."  [[reply_msg(ØµØ§Ø± Ø³ØªØ§Ø¯ÙŠ ØªØ§Ø¨Ø¹ @b7_78)
+
+elseif matches[1] == 'unlock' and matches[2] == 'link' and not is_momod(msg) then 
+local = 'Ù„ØªÙ„Ø¹Ù€Ø¨ Ø§Ø¨Ù€à¥Ùˆ Ø¯ÙˆØ¯Ø©ğŸ˜ğŸŒ' 
+reply_msg
+
+
+
+run=run
+
+end
+
