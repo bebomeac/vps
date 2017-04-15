@@ -1,6 +1,6 @@
 --Begin Ping.lua By @Sajad_Aliraqi
 local datebase = {
-   "BOTBBEBO Is Online\nıÈÜæÊ ÈíÈæ ÔÜÛÜÇá ?? ",
+   "BOTBEBO Is Online\nâ€Ø¨Ù€ÙˆØª Ø§Ù„Ù€Ø¨ÙŠÙˆ Ø´Ù€ØºÙ€Ø§Ù„ â¤ï¸ ",
   }
 local function th3boss(msg, matches) 
 return datebase[math.random(#datebase)]
@@ -9,7 +9,7 @@ return {
   patterns = {
     "^(bot)",
   "^(bot)",
-ı  "^(ÈæÊ)"
+â€  "^(Ø¨ÙˆØª)"
   },
   run = th3boss
 }
