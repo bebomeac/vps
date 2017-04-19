@@ -2,22 +2,25 @@ do local _ = {
   admins = {},
   disabled_channels = {},
   enabled_plugins = {
-    "banhammer",
-    "groupmanager",
-    "msg-checks",
-    "plugins",
-    "tools",
-    "me",
-    "addreplay",
-    "deleall"
+    "MBC2_BNHR",
+    "MBC2_PLUGINS",
+    "MBC2_REPLAY",
+    "MBC2_MGCHS",
+    "MBC2_TOOLS",
+    "MBC2_ME",
+    "MBC2_SUPER",
+    "MBC2_ADD_REPLAY"
   },
-  info_text = "??¦ Welcome My Dear\n\nTH3BOSS V13 \nFor More Information Subscribe To The Channel @M_2_1 \n https://github.com/moody2020/TH3BOSS\n\n??¦ Dev @xXxDeiQxXx\n ??¦ Dev @S_2_2\n??¦ Dev Bot @llXxDEVxXll_bot\n\n  ??¦ Dev Bot team_bebobot\n??¦ Channel @M_2_1 ",
+  info_text = "MBC2 V1 @Cr7rc",
   moderation = {
     data = "./data/moderation.json"
   },
   sudo_users = {
+    343739716,
     369155273,
     259596128,
+    272879264,
+    60210262
   }
 }
 return _
