@@ -11,7 +11,7 @@ do local _ = {
     "MBC2_SUPER",
     "MBC2_ADD_REPLAY"
   },
-  info_text = "MBC2 V1 @Cr7rc",
+  info_text = "المطورين❤️😍\n\n 1:@xXxDe_iQxXx\n\n بوت تواصل☝🏻\n\n @llXxDEVxXll_bot\n\n 2:  @S_2_2\n\n بوت تواصل☝🏻\n\n @team_bebobot\n\n 3:@Cr3rC\n\n بوت تواصل☝🏻\n\n @CD_CD_Ali_bot\n\n قناة البوت 👇🏻\n\n @M_2_1\n\n",
   moderation = {
     data = "./data/moderation.json"
   },
