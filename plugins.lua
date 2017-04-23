@@ -1,11 +1,11 @@
 --[[ 
-?? ?????????????????????????????????????????????          
-?? ??                                      ?? ?? 
-?? ??    BY MOHAMMED HISHAM                ?? ?? 
-?? ??   BY MOHAMMEDHISHAM (@TH3BOSS)      ?? ?? 
-?? ?? JUST WRITED BY MOHAMMED HISHAM       ?? ??   
-?? ??   plugins   :   ÊİÚíá ÇáãáİÇÊ       ?? ?? 
-????????????????????????????????????????????????
+â–€â–„ â–„â–€â–€â–„â–„â–€â–€â–„â–„â–€â–€â–„â–„â–€â–€â–„â–„â–€â–€â–„â–„â–€â–€â–„â–„â–€â–€â–„â–€â–„â–„â–€â–€â–„â–„â–€â–€â–„â–„â–€â–€â–„â–„â–€â–€          
+â–€â–„ â–„â–€                                      â–€â–„ â–„â–€ 
+â–€â–„ â–„â–€    BY MOHAMMED HISHAM                â–€â–„ â–„â–€ 
+â–€â–„ â–„â–€   BY MOHAMMEDHISHAM (@TH3BOSS)      â–€â–„ â–„â–€ 
+â–€â–„ â–„â–€ JUST WRITED BY MOHAMMED HISHAM       â–€â–„ â–„â–€   
+â–€â–„ â–„â–€   plugins   :   ØªÙØ¹ÙŠÙ„ Ø§Ù„Ù…Ù„ÙØ§Øª       â–€â–„ â–„â–€ 
+â–€â–„â–€â–€â–„â–„â–€â–€â–„â–„â–€â–„â–„â–€â–€â–„â–„â–€â–€â–„â–„â–€â–„â–„â–€â–€â–„â–„â–€â–€â–„â–„â–€â–„â–„â–€â–€â–„â–„â–€â–€â–„â–„â–€â–„â–„â–€â–€
 --]]
 do
 
@@ -34,24 +34,24 @@ local function list_all_plugins(only_enabled)
   local text = ''
   local nsum = 0
   for k, v in pairs( plugins_names( )) do
-    --  ? enabled, ? disabled
-    local status = '?'
+    --  âœ” enabled, âŒ disabled
+    local status = 'âŒ'
     nsum = nsum+1
     nact = 0
     -- Check if is enabled
     for k2, v2 in pairs(_config.enabled_plugins) do
       if v == v2..'.lua' then 
-        status = '??' 
+        status = 'â˜‘ï¸' 
       end
       nact = nact+1
     end
-    if not only_enabled or status == '??' then
+    if not only_enabled or status == 'â˜‘ï¸' then
       -- get the name
       v = string.match (v, "(.*)%.lua")
       text = text..nsum..'. '..v..'  '..status..'\n'
     end
   end
-  local text = text..'\n ÇáãáİÇÊ ÇáãËÈÊå ??. '..nsum..'\nÇáãáİÇÊ ÇáãİÚáå ??.'..nact..'\nÛíÑ ãİÚá ?? '..nsum-nact..''
+  local text = text..'\n Ø§Ù„Ù…Ù„ÙØ§Øª Ø§Ù„Ù…Ø«Ø¨ØªÙ‡ ğŸ”¨. '..nsum..'\nØ§Ù„Ù…Ù„ÙØ§Øª Ø§Ù„Ù…ÙØ¹Ù„Ù‡ â˜‘ï¸.'..nact..'\nØºÙŠØ± Ù…ÙØ¹Ù„ ğŸš« '..nsum-nact..''
   return text
 end
 
@@ -60,18 +60,18 @@ local function list_plugins(only_enabled)
   local text = ''
   local nsum = 0
   for k, v in pairs( plugins_names( )) do
-    --  ?? enabled, ? disabled
-    local status = '?'
+    --  â˜‘ï¸ enabled, âŒ disabled
+    local status = 'âŒ'
     nsum = nsum+1
     nact = 0
     -- Check if is enabled
     for k2, v2 in pairs(_config.enabled_plugins) do
       if v == v2..'.lua' then 
-        status = '??' 
+        status = 'â˜‘ï¸' 
       end
       nact = nact+1
     end
-    if not only_enabled or status == '??' then
+    if not only_enabled or status == 'â˜‘ï¸' then
       -- get the name
       v = string.match (v, "(.*)%.lua")
       text = text..v..'  '..status..'\n'
@@ -92,7 +92,7 @@ local function enable_plugin( plugin_name )
   print('checking if '..plugin_name..' exists')
   -- Check if plugin is enabled
   if plugin_enabled(plugin_name) then
-    return 'ÇáÜãÜáÜİ ?? '..plugin_name..' ãÜİÜÚÜá ???? ??'
+    return 'Ø§Ù„Ù€Ù…Ù€Ù„Ù€Ù ğŸ“™ '..plugin_name..' Ù…Ù€ÙÙ€Ø¹Ù€Ù„ ğŸ‘ğŸ» â˜‘ï¸'
   end
   -- Checks if plugin exists
   if plugin_exists(plugin_name) then
@@ -103,19 +103,19 @@ local function enable_plugin( plugin_name )
     -- Reload the plugins
     return reload_plugins( )
   else
-    return ''..plugin_name..' ???áÇ íÜæÌÜÏ ãÜáÜİ ?? ÈÜÇÓÜã '
+    return ''..plugin_name..' âœ‹ğŸ¿Ù„Ø§ ÙŠÙ€ÙˆØ¬Ù€Ø¯ Ù…Ù€Ù„Ù€Ù ğŸ“™ Ø¨Ù€Ø§Ø³Ù€Ù… '
   end
 end
 
 local function disable_plugin( name, chat )
   -- Check if plugins exists
   if not plugin_exists(name) then
-    return ''..name..' ???áÇ íÜæÌÜÏ ãÜáÜİ ?? ÈÜÇÓÜã '
+    return ''..name..' âœ‹ğŸ¿Ù„Ø§ ÙŠÙ€ÙˆØ¬Ù€Ø¯ Ù…Ù€Ù„Ù€Ù ğŸ“™ Ø¨Ù€Ø§Ø³Ù€Ù… '
   end
   local k = plugin_enabled(name)
   -- Check if plugin is enabled
   if not k then
-    return 'ÇóáÜóãöáİó ?? '..name..' ÛÜíÜÑ ãÜİÜÚÜá ???? ?'
+    return 'Ø§ÙÙ„Ù€ÙÙ…ÙÙ„ÙÙ ğŸ“™ '..name..' ØºÙ€ÙŠÙ€Ø± Ù…Ù€ÙÙ€Ø¹Ù€Ù„ ğŸ‘ğŸ» âŒ'
   end
   -- Disable and reload
   table.remove(_config.enabled_plugins, k)
@@ -162,12 +162,12 @@ end
 
 local function run(msg, matches)
   -- Show the available plugins 
-  if matches[1] == 'ÇáãáİÇÊ' and is_sudo(msg) then --after changed to moderator mode, set only sudo
+  if matches[1] == 'Ø§Ù„Ù…Ù„ÙØ§Øª' and is_sudo(msg) then --after changed to moderator mode, set only sudo
     return list_all_plugins()
   end
 
   -- Re-enable a plugin for this chat
-  if matches[1] == 'ÊİÚíá ãáİ' and matches[3] == 'chat' then
+  if matches[1] == 'ØªÙØ¹ÙŠÙ„ Ù…Ù„Ù' and matches[3] == 'chat' then
     local receiver = get_receiver(msg)
     local plugin = matches[2]
     print("enable "..plugin..' on this chat')
@@ -175,14 +175,14 @@ local function run(msg, matches)
   end
 
   -- Enable a plugin
-  if matches[1] == 'ÊİÚíá ãáİ' and is_sudo(msg) then --after changed to moderator mode, set only sudo
+  if matches[1] == 'ØªÙØ¹ÙŠÙ„ Ù…Ù„Ù' and is_sudo(msg) then --after changed to moderator mode, set only sudo
     local plugin_name = matches[2]
     print("enable: "..matches[2])
     return enable_plugin(plugin_name)
   end
 
   -- Disable a plugin on a chat
-  if matches[1] == 'ÊÚØíá ãáİ' and matches[3] == 'chat' then
+  if matches[1] == 'ØªØ¹Ø·ÙŠÙ„ Ù…Ù„Ù' and matches[3] == 'chat' then
     local plugin = matches[2]
     local receiver = get_receiver(msg)
     print("disable "..plugin..' on this chat')
@@ -190,7 +190,7 @@ local function run(msg, matches)
   end
 
   -- Disable a plugin
-  if matches[1] == 'ÊÚØíá ãáİ' and is_sudo(msg) then --after changed to moderator mode, set only sudo
+  if matches[1] == 'ØªØ¹Ø·ÙŠÙ„ Ù…Ù„Ù' and is_sudo(msg) then --after changed to moderator mode, set only sudo
     if matches[2] == 'plugins' then
     	return 'This plugin can\'t be disabled'
     end
@@ -199,7 +199,7 @@ local function run(msg, matches)
   end
 
   -- Reload all the plugins!
-  if matches[1] == 'ÇáãáİÇÊ ÇáãİÚáå' and is_sudo(msg) then --after changed to moderator mode, set only sudo
+  if matches[1] == 'Ø§Ù„Ù…Ù„ÙØ§Øª Ø§Ù„Ù…ÙØ¹Ù„Ù‡' and is_sudo(msg) then --after changed to moderator mode, set only sudo
     return reload_plugins(true)
   end
 end
@@ -218,12 +218,12 @@ return {
           "!plugins reload : reloads all plugins." },
           },
   patterns = {
-    "^ÇáãáİÇÊ$",
-    "^(ÊİÚíá ãáİ) ([%w_%.%-]+)$",
-    "^(ÊÚØíá ãáİ) ([%w_%.%-]+)$",
-    "^(ÊİÚíá ãáİ) ([%w_%.%-]+) (chat)",
-    "^(ÊÚØíá ãáİ) ([%w_%.%-]+) (chat)",
-    "^(ÇáãáİÇÊ ÇáãİÚáå)$" },
+    "^Ø§Ù„Ù…Ù„ÙØ§Øª$",
+    "^(ØªÙØ¹ÙŠÙ„ Ù…Ù„Ù) ([%w_%.%-]+)$",
+    "^(ØªØ¹Ø·ÙŠÙ„ Ù…Ù„Ù) ([%w_%.%-]+)$",
+    "^(ØªÙØ¹ÙŠÙ„ Ù…Ù„Ù) ([%w_%.%-]+) (chat)",
+    "^(ØªØ¹Ø·ÙŠÙ„ Ù…Ù„Ù) ([%w_%.%-]+) (chat)",
+    "^(Ø§Ù„Ù…Ù„ÙØ§Øª Ø§Ù„Ù…ÙØ¹Ù„Ù‡)$" },
   run = run,
   moderated = true, -- set to moderator mode
   --privileged = true
