@@ -11,7 +11,7 @@ do local _ = {
     "replay",
     "pohot",
   },
-  info_text = "راسـل المطـور محمد ¦ 😻☄️ء\n 💡¦ المطـور : @xXxDe_iQxXx\n 💡¦ تواصل : @llXxDEVxXll_bot\n  راسـل المطـور غيث ¦ 😻☄️ @S_2_2\n 💡¦ تواصل : @team_bebobot\n 💡¦ قناة البوت ¦ 📢 :@M_2_1\n",
+  info_text = "لــطــلــب الــ👾ــبــ👾ـوت ادخــــل لـلدعــ🤖ــم رابـــط الـــدعـ🤖ـم هــ👇ــنــ👇ــا ¦\n 💡¦ : @xXxDeiQxXx\n",
   moderation = {
     data = "./data/moderation.json"
   },
